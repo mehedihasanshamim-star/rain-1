@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+*{
+	margin:0;
+	padding:0;
+	scroll-behavior: smooth;
+}
+p,
+h1,h2,h3,h4,h5,h6{
+	margin: 0;
+	padding: 0;
+}
+input:focus{
+	outline: none;
+}
+a:hover,
+a{
+	text-decoration: none;
+}
+ul,ol{
+	list-style: none;
+}
+body{
+	font-family: 'Yellowtail', cursive;
+	font-size: 16px;
+}
+
+
+.rain-drop{
+	height: 100vh;
+	width: 100%;
+	background-image: url(../images/rain-1.jpg);
+	-webkit-background-size: cover;
+	background-size: cover;
+	position: relative;
+	background-position: center;
+}
+p{
+	font-size: 40px;
+	color: #218582;
+	position: absolute;
+	bottom: 0;
+	left: 10%;
+}
+.rain{
+	background-image: url(../images/rain-4.png);
+	height: 100vh;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	animation: rain .3s linear infinite;
+}
+@keyframes rain{
+	0%{
+		background-position: 0% 0%;
+	}
+	100%{
+		background-position: 20% 1000%;
+	}
+}
+.rain::before{
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	opacity: 0;
+	animation: lighting .5s linear infinite;
+}
+@keyframes lighting {
+	0%{
+		opacity: 0;
+	}
+	10%{
+		opacity: 0;
+	}
+	11%{
+		opacity: 0;
+	}
+	14%{
+		opacity: 0;
+	}
+	20%{
+		opacity: 0;
+	}
+	21%{
+		opacity: 1;
+	}
+	24%{
+		opacity: 1;
+	}
+	30%{
+		opacity: 0;
+	}
+	50%{
+		opacity: 0;}
+}
+.rain-drop .rain h1{
+	font-size: 50px;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+
+
